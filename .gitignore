@@ -1,0 +1,11 @@
+
+.DS_Store
+
+*.map
+*.log
+
+dist
+
+node_modules
+
+webpack/s3-deploy-config.json

@@ -8,6 +8,7 @@ import { withStyles } from '@material-ui/core/styles'
 
 import PrivateRoute from './_components/PrivateRoute'
 import Front from './_components/Front'
+import Projects from './_components/Projects'
 import Users from './_components/Users'
 import Login from './_components/Login'
 import Error404 from './_components/404'
@@ -62,6 +63,7 @@ class App extends Component {
         <Router history={ history }>
           <Switch>
             <PrivateRoute exact path="/" component={ Front } />
+            <PrivateRoute path="/projects" component={ Projects } />
             <PrivateRoute path="/users" component={ Users } />
             <Route path="/login" component={ Login } />
             <PrivateRoute component={ Error404 } />

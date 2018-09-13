@@ -87,11 +87,11 @@ class MainMenu extends PureComponent {
             </div>
           </MenuItem>
           <Divider />
-          <MenuItem onClick={ () => this.handleMenuClick('/admin') }>
+          <MenuItem onClick={ () => this.handleMenuClick('/projects') }>
             <ListItemIcon>
               <Dashboard />
             </ListItemIcon>
-            <ListItemText inset primary="Albums" />
+            <ListItemText inset primary="Projects" />
           </MenuItem>
           <MenuItem onClick={ () => this.handleMenuClick('/users') }>
             <ListItemIcon>

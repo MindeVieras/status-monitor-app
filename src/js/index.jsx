@@ -15,7 +15,7 @@ const theme = createMuiTheme({
   }
 })
 
-console.log(theme)
+// console.log(theme)
 
 const StatusMonitorApp = () => (
   <Provider store={ store }>

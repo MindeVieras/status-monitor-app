@@ -65,14 +65,12 @@ class UsersList extends Component {
 UsersList.propTypes = {
   dispatch: PropTypes.func.isRequired,
   classes: PropTypes.object.isRequired,
-  auth: PropTypes.object.isRequired,
   users: PropTypes.object.isRequired
 }
 
 function mapStateToProps(state) {
-  const { auth, users } = state
+  const { users } = state
   return {
-    auth,
     users: users.list
   }
 }

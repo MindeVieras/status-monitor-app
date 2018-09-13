@@ -41,17 +41,6 @@ const styles = theme => ({
     lineHeight: 1,
     transform: `translate(0, 1.5px) scale(0.75)`,
     transformOrigin: `top left`
-  },
-  selectRoot: {
-    color: `#fff`,
-    display: `inline-flex`,
-    position: `relative`,
-    fontSize: `1rem`,
-    fontFamily: `"Roboto", "Helvetica", "Arial", sans-serif`,
-    lineHeight: `1.1875em`
-  },
-  selectWithLabel: {
-    marginTop: theme.spacing.unit * 2
   }
 })
 

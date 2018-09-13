@@ -19,6 +19,7 @@ const initialState = {
 }
 
 export function users(state = initialState, action) {
+
   switch (action.type) {
 
   /*

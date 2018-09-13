@@ -12,7 +12,7 @@ import { uiConstants } from 'Constants'
 import { Tip, SimpleModal } from 'Common'
 import { uiActions } from 'Actions'
 
-import UserCreateForm from './UserCreateForm'
+import ProjectCreateForm from './ProjectCreateForm'
 
 const styles = theme => ({
   button: {
@@ -24,10 +24,10 @@ const styles = theme => ({
   }
 })
 
-class UserCreateButton extends Component {
+class ProjectCreateButton extends Component {
 
   handleModalOpen() {
-    this.props.dispatch(uiActions.modalOpen(uiConstants.MODAL_ID_USER_CREATE))
+    this.props.dispatch(uiActions.modalOpen(uiConstants.MODAL_ID_PROJECT_CREATE))
   }
 
   render() {
@@ -38,7 +38,7 @@ class UserCreateButton extends Component {
       <Fragment>
         <Button
           data-tip
-          data-for="tip_create_new_user"
+          data-for="tip_create_new_project"
           onClick={ () => this.handleModalOpen() }
           variant="fab"
           color="primary"
@@ -47,15 +47,15 @@ class UserCreateButton extends Component {
         >
           <AddIcon />
         </Button>
-        <Tip id="tip_create_new_user">Create new user</Tip>
+        <Tip id="tip_create_new_user">Create new project</Tip>
 
         <SimpleModal
-          modal_id={ uiConstants.MODAL_ID_USER_CREATE }
-          title="Create new user"
+          modal_id={ uiConstants.MODAL_ID_PROJECT_CREATE }
+          title="Create new project"
           closeButton={ true }
           disableEscapeKeyDown={ true }
         >
-          <UserCreateForm />
+          <ProjectCreateForm />
         </SimpleModal>
 
       </Fragment>
@@ -63,9 +63,9 @@ class UserCreateButton extends Component {
   }
 }
 
-UserCreateButton.propTypes = {
+ProjectCreateButton.propTypes = {
   dispatch: PropTypes.func.isRequired,
   classes: PropTypes.object.isRequired
 }
 
-export default connect()(withStyles(styles)(UserCreateButton))
+export default connect()(withStyles(styles)(ProjectCreateButton))
